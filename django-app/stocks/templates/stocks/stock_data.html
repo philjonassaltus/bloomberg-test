@@ -1,0 +1,29 @@
+<!-- stocks/templates/stocks/stock_data.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Data</title>
+</head>
+<body>
+    <h1>Stock Data (Apr 1 - Apr 10, 2025)</h1>
+    {% for stock in stock_data %}
+        <h2>{{ stock.name }} ({{ stock.ticker }})</h2>
+        <p>{{ stock.description }}</p>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Date</th>
+                <th>Open</th>
+                <th>Close</th>
+            </tr>
+            {% for row in stock.records %}
+                <tr>
+                    <td>{{ row.Date }}</td>
+                    <td>{{ row.Open }}</td>
+                    <td>{{ row.Close }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br>
+    {% endfor %}
+</body>
+</html>
