@@ -1,0 +1,20 @@
+<!-- stocks/templates/stocks/company_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company List</title>
+</head>
+<body>
+    <h1>Company List</h1>
+    <ul>
+        {% for ticker, company in companies.items %}
+            <li>
+                <h2>{{ company.name }} ({{ company.ticker }})</h2>
+                <p>{{ company.description }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
