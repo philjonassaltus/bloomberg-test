@@ -1,6 +1,6 @@
 import yfinance as yf
 
-companies = {
+magnificent_seven = {
     "AAPL": {
         "ticker": "AAPL",
         "name": "Apple",
@@ -39,7 +39,7 @@ companies = {
 }
 
 if __name__ == "__main__":
-    for key, value in companies.items():
+    for key, value in magnificent_seven.items():
         print(value["name"])
         data = yf.download(key, start="2025-04-01", end="2025-04-10")
         print(data[["Close", "Open"]])
