@@ -8,3 +8,7 @@
 `python3 -m pip install yfinance`
 ### Finally
 `python3 main.py`
+
+
+python3 manage.py migrate
+python3 manage.py runserver
