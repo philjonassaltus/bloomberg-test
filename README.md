@@ -9,6 +9,7 @@
 ### Finally
 `python3 main.py`
 
-
-python3 manage.py migrate
-python3 manage.py runserver 1234
+### Make migrations 
+`python3 manage.py migrate`
+### Run django on localhost:1234
+`python3 manage.py runserver 1234`
